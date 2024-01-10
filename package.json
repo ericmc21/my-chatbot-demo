@@ -1,0 +1,30 @@
+{
+  "name": "my-chatbot-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite prev",
+    "serve": "vite"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.7",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "node-loader": "^2.0.0",
+    "sass": "^1.69.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vue-tsc": "^1.8.25"
+  },
+  "optionalDependencies": {
+    "fsevents": "~2.3.2"
+  }
+}
