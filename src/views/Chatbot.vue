@@ -10,13 +10,17 @@ import useApiStore from "@/stores/api.store.js";
 import { useFlowStore } from "@/stores/flow.store.js";
 import Introduction from "@/components/flow/initial/Introduction.vue";
 import InitialInteraction from "@/components/flow/initial/InitialInteraction.vue";
+import GenderQuestion from "@/components/flow/initial/GenderQuestion.vue";
 import { computed, onMounted } from "vue";
+import PlainMessage from "@/components/flow/PlainMessage.vue";
 import MessageLoading from "@/components/MessageLoading.vue";
 
 export default {
   components: {
     Introduction,
     InitialInteraction,
+    GenderQuestion,
+    PlainMessage,
     MessageLoading,
   },
   setup() {
