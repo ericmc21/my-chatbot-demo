@@ -1,16 +1,23 @@
 <template>
-  <introduction></introduction>
+  <template v-for="(elem, index) in flow" :key="index">
+    <component :is="elem.component" v-bind="elem.properties" />
+    <MessageLoading :loading="loading" />
+  </template>
 </template>
 
 <script>
 import useApiStore from "@/stores/api.store.js";
 import { useFlowStore } from "@/stores/flow.store.js";
 import Introduction from "@/components/flow/initial/Introduction.vue";
+import InitialInteraction from "@/components/flow/initial/InitialInteraction.vue";
 import { computed, onMounted } from "vue";
+import MessageLoading from "@/components/MessageLoading.vue";
 
 export default {
   components: {
     Introduction,
+    InitialInteraction,
+    MessageLoading,
   },
   setup() {
     const flowStore = useFlowStore(),
