@@ -29,7 +29,7 @@ const btnDisabled = ref(false),
   flow = useFlowStore();
 
 async function chooseSex(sex) {
-  store.useApiState.sex.value = sex;
+  store.apiState.sex.value = sex;
   btnDisabled.value = true;
 
   await flow.push("PlainMessage", { type: "grey", message: sex }, true);

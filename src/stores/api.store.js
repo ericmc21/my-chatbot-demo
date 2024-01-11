@@ -31,7 +31,7 @@ const useApiStore = defineStore("api-store", {
     },
 
     async getDiagnosis() {
-      this.isLoading = ture;
+      this.isLoading = true;
 
       return api(
         "diagnosis",
@@ -43,7 +43,7 @@ const useApiStore = defineStore("api-store", {
       )
         .then((response) => response.json())
         .then(async (response) => {
-          this.should_stop = this.this.diagnosis;
+          this.should_stop = this.diagnosis;
 
           this.should_stop = response.should_stop;
           this.conditions = response.conditions;
@@ -70,7 +70,7 @@ const useApiStore = defineStore("api-store", {
         this.apiState.interviewId,
         "POST"
       )
-        .then(() => response.json())
+        .then((response) => response.json())
         .then((response) => {
           this.triageLevel = response.triage_level;
           this.alarmingSymptoms = response.serious;
@@ -109,7 +109,7 @@ const useApiStore = defineStore("api-store", {
 
           if (response.mentions.length !== 0) {
             if (response.obvious === true) {
-              response.mentions.forEach((metnion) => {
+              response.mentions.forEach((mention) => {
                 this.apiState.evidence.push({
                   id: mention.id,
                   choice_id: mention.choice_id,
@@ -121,7 +121,7 @@ const useApiStore = defineStore("api-store", {
               this.mentions = response.mentions;
 
               await flow.push("PlainMessage", {
-                message: "I'm not sure I got that. Is this correct?",
+                message: "I'm not sure I got that. Is this correct?:",
               });
 
               await flow.push("NotObviousAnswer", {
