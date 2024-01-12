@@ -12,6 +12,7 @@ declare module 'vue' {
     MessageInput: typeof import('./src/components/MessageInput.vue')['default']
     MessageLoading: typeof import('./src/components/MessageLoading.vue')['default']
     MessageTile: typeof import('./src/components/MessageTile.vue')['default']
+    RegionComponent: typeof import('./src/components/RegionComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
