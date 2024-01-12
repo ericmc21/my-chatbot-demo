@@ -13,6 +13,7 @@ declare module 'vue' {
     MessageLoading: typeof import('./src/components/MessageLoading.vue')['default']
     MessageTile: typeof import('./src/components/MessageTile.vue')['default']
     RegionComponent: typeof import('./src/components/RegionComponent.vue')['default']
+    RiskfactorCheckbox: typeof import('./src/components/RiskfactorCheckbox.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

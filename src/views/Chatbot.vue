@@ -13,6 +13,7 @@ import InitialInteraction from "@/components/flow/initial/InitialInteraction.vue
 import GenderQuestion from "@/components/flow/initial/GenderQuestion.vue";
 import AgeQuestion from "@/components/flow/initial/AgeQuestion.vue";
 import RiskfactorRegion from "@/components/flow/initial/RiskfactorRegion.vue";
+import RiskfactorSuggestions from "@/components/flow/initial/RiskfactorSuggestions.vue";
 import { computed, onMounted } from "vue";
 import PlainMessage from "@/components/flow/PlainMessage.vue";
 import MessageLoading from "@/components/MessageLoading.vue";
@@ -24,6 +25,7 @@ export default {
     GenderQuestion,
     AgeQuestion,
     RiskfactorRegion,
+    RiskfactorSuggestions,
     PlainMessage,
     MessageLoading,
   },
