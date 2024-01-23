@@ -24,6 +24,9 @@ import UserResponse from "@/components/flow/parse/UserResponse.vue";
 import ObviousAnswer from "@/components/flow/parse/ObviousAnswer.vue";
 import QuestionSingle from "@/components/flow/questions/QuestionSingle.vue";
 import QuestionGroupSingle from "@/components/flow/questions/QuestionGroupSingle.vue";
+import Results from "@/components/flow/results/Results.vue";
+import TriageRecommendation from "@/components/flow/results/TriageRecommendation.vue";
+import TriageAlarmingSymptoms from "@/components/flow/results/TriageAlarmingSymptoms.vue";
 import { computed, onMounted } from "vue";
 import PlainMessage from "@/components/flow/PlainMessage.vue";
 import MessageLoading from "@/components/MessageLoading.vue";
@@ -41,6 +44,9 @@ export default {
     ObviousAnswer,
     QuestionSingle,
     QuestionGroupSingle,
+    Results,
+    TriageRecommendation,
+    TriageAlarmingSymptoms,
     PlainMessage,
     MessageLoading,
   },

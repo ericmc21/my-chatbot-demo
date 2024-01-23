@@ -53,7 +53,7 @@ const useApiStore = defineStore("api-store", {
           if (this.should_stop) {
             await this.getTriage();
             const flow = useFlowStore();
-
+            console.log(flow);
             flow.insertResultsToFlow();
           }
         });
@@ -73,6 +73,7 @@ const useApiStore = defineStore("api-store", {
         .then((response) => response.json())
         .then((response) => {
           this.triageLevel = response.triage_level;
+          console.log(this.triageLevel);
           this.alarmingSymptoms = response.serious;
         });
     },

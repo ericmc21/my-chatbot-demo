@@ -71,34 +71,35 @@ export const useFlowStore = defineStore("flow-store", {
         });
       }
     },
-  },
 
-  async insertResultsToFlow() {
-    const store = useApiStore();
+    async insertResultsToFlow() {
+      const store = useApiStore();
 
-    await this.push("TriageRecommendation", {
-      triageLevel: store.alarmingSymptoms,
-    });
-
-    store.alarmingSymptoms.length &&
-      (await this.push("TriageAlarmingSymptoms", {
-        symptoms: store.alarmingSymptoms,
-      }));
-
-    await this.push("Results", { conditions: store.conditions });
-  },
-
-  async iterateNotObviousAnswer() {
-    const store = useApiStore();
-
-    store.mentions.shift();
-
-    if (store.mentions.length >= 1) {
-      await this.push("NotObviousAnswer", {
-        mention: store.mentions[0],
+      console.log("hello!");
+      await this.push("TriageRecommendation", {
+        triageLevel: store.triageLevel,
       });
-    } else {
-      await this.push("ObviousAnswer");
-    }
+
+      store.alarmingSymptoms.length &&
+        (await this.push("TriageAlarmingSymptoms", {
+          symptoms: store.alarmingSymptoms,
+        }));
+
+      await this.push("Results", { conditions: store.conditions });
+    },
+
+    async iterateNotObviousAnswer() {
+      const store = useApiStore();
+
+      store.mentions.shift();
+
+      if (store.mentions.length >= 1) {
+        await this.push("NotObviousAnswer", {
+          mention: store.mentions[0],
+        });
+      } else {
+        await this.push("ObviousAnswer");
+      }
+    },
   },
 });
