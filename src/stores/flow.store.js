@@ -13,9 +13,13 @@ export const useFlowStore = defineStore("flow-store", {
   actions: {
     push(component, properties = {}, noTimeout = false) {
       const store = useApiStore();
+
+      noTimeout || (store.isLoading = true);
+
       return new Promise((resolve) => {
         setTimeout(
           () => {
+            console.log(component);
             this.flow.push({
               component: component,
               properties: properties,
@@ -36,7 +40,7 @@ export const useFlowStore = defineStore("flow-store", {
         if (store.question.items.length >= 1) {
           await this.push("QuestionSingle", {
             question: {
-              text: store.questions.items[0].name,
+              text: store.question.items[0].name,
               items: [store.question.items[0]],
             },
           });
@@ -73,7 +77,7 @@ export const useFlowStore = defineStore("flow-store", {
     const store = useApiStore();
 
     await this.push("TriageRecommendation", {
-      symptoms: store.alarmingSymptoms,
+      triageLevel: store.alarmingSymptoms,
     });
 
     store.alarmingSymptoms.length &&

@@ -1,8 +1,13 @@
 <template>
   <template v-for="(elem, index) in flow" :key="index">
     <component :is="elem.component" v-bind="elem.properties" />
-    <MessageLoading :loading="loading" />
   </template>
+  <MessageLoading :loading="loading" />
+  <MessageInput
+    :shown="flowStore.$state.show_input"
+    :disabled="messageInputDisabled"
+    @message="handleMessage"
+  />
 </template>
 
 <script>
@@ -14,6 +19,11 @@ import GenderQuestion from "@/components/flow/initial/GenderQuestion.vue";
 import AgeQuestion from "@/components/flow/initial/AgeQuestion.vue";
 import RiskfactorRegion from "@/components/flow/initial/RiskfactorRegion.vue";
 import RiskfactorSuggestions from "@/components/flow/initial/RiskfactorSuggestions.vue";
+import Question from "@/components/flow/initial/Question.vue";
+import UserResponse from "@/components/flow/parse/UserResponse.vue";
+import ObviousAnswer from "@/components/flow/parse/ObviousAnswer.vue";
+import QuestionSingle from "@/components/flow/questions/QuestionSingle.vue";
+import QuestionGroupSingle from "@/components/flow/questions/QuestionGroupSingle.vue";
 import { computed, onMounted } from "vue";
 import PlainMessage from "@/components/flow/PlainMessage.vue";
 import MessageLoading from "@/components/MessageLoading.vue";
@@ -26,6 +36,11 @@ export default {
     AgeQuestion,
     RiskfactorRegion,
     RiskfactorSuggestions,
+    Question,
+    UserResponse,
+    ObviousAnswer,
+    QuestionSingle,
+    QuestionGroupSingle,
     PlainMessage,
     MessageLoading,
   },
