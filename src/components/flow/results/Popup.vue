@@ -5,7 +5,7 @@
       <img
         width="355"
         height="544"
-        src="../src/assets/images/find-doc-3.png"
+        src="@/assets/images/find-doc-3.png"
         alt=""
       />
     </div>

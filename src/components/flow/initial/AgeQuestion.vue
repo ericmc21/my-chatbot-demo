@@ -99,7 +99,7 @@ label {
   display: block;
   margin-bottom: 21px;
   font-size: 14px;
-  color: $text-white;
+  color: $white;
 }
 
 .slider-wrapper {
@@ -128,7 +128,7 @@ label {
   }
 
   .thumb {
-    background-color: $primary;
+    background-color: $brand;
     border-radius: 50%;
     height: $thumb-size;
     width: $thumb-size;

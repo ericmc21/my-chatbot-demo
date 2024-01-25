@@ -86,6 +86,7 @@ function handleDone() {
     border-radius: 100%;
     display: grid;
     place-items: center;
+    background-color: $brand;
   }
   &__checkbox-icon {
     width: 15px;

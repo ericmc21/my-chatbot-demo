@@ -32,8 +32,8 @@ export default {
 
 <style lang="scss" scoped>
 .button {
-  color: #3f94ff;
-  background-color: #ffffff;
+  color: #fff;
+  background-color: $brand;
   padding: 6px 22px;
   border-radius: 30px;
   font-size: 12px;
@@ -53,7 +53,7 @@ export default {
   }
 
   &:hover {
-    background-color: #2c7bdb;
+    background-color: $brand;
     color: #fff;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }

@@ -50,7 +50,6 @@ const props = defineProps({
   buttonVisibility = ref(""),
   buttonText = ref("");
 
-console.log(props.triageLevel);
 switch (props.triageLevel) {
   case "emergency_ambulance":
     paragraph.value =

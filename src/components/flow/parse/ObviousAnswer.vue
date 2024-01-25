@@ -21,7 +21,6 @@ const flow = useFlowStore(),
 async function next(more) {
   btnDisabled.value = true;
 
-  console.log(more);
   if (more) {
     await flow.push("Question", {}, true);
     flow.disable_input = false;

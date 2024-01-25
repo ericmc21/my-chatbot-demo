@@ -205,6 +205,7 @@ function handleDone() {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $white !important; // arrow buttons.  edit for branding
 
   &--back {
     @extend .button-go;
