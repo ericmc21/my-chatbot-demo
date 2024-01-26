@@ -7,7 +7,9 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CommonSymptomsCheckbox: typeof import('./src/components/CommonSymptomsCheckbox.vue')['default']
     ConditionPercentage: typeof import('./src/components/ConditionPercentage.vue')['default']
+    ConditionSpecificCheckbox: typeof import('./src/components/ConditionSpecificCheckbox.vue')['default']
     MessageBox: typeof import('./src/components/MessageBox.vue')['default']
     MessageButton: typeof import('./src/components/MessageButton.vue')['default']
     MessageInput: typeof import('./src/components/MessageInput.vue')['default']

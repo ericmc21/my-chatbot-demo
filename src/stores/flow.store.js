@@ -75,7 +75,6 @@ export const useFlowStore = defineStore("flow-store", {
     async insertResultsToFlow() {
       const store = useApiStore();
 
-      console.log("hello!");
       await this.push("TriageRecommendation", {
         triageLevel: store.triageLevel,
       });
