@@ -3,14 +3,14 @@
     Super! Please select your sex assigned at birth:
     <div class="btn-container">
       <message-tile
-        icon="/src/assets/images/svg/gender/female.svg"
+        icon="@/assets/images/svg/gender/female.svg"
         text="Female"
         :disabled="btnDisabled"
         @click="chooseSex('female')"
       />
 
       <message-tile
-        icon="/src/assets/images/svg/gender/male.svg"
+        icon="@/assets/images/svg/gender/male.svg"
         text="Male"
         :disabled="btnDisabled"
         @click="chooseSex('male')"
