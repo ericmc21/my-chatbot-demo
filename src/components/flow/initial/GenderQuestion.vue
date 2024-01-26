@@ -3,14 +3,14 @@
     Super! Please select your sex assigned at birth:
     <div class="btn-container">
       <message-tile
-        icon="@/assets/images/svg/gender/female.svg"
+        :icon="female"
         text="Female"
         :disabled="btnDisabled"
         @click="chooseSex('female')"
       />
 
       <message-tile
-        icon="@/assets/images/svg/gender/male.svg"
+        :icon="male"
         text="Male"
         :disabled="btnDisabled"
         @click="chooseSex('male')"
@@ -23,6 +23,9 @@
 import { ref } from "vue";
 import useApiStore from "@/stores/api.store";
 import { useFlowStore } from "@/stores/flow.store";
+
+import male from "@/assets/images/svg/gender/male.svg";
+import female from "@/assets/images/svg/gender/female.svg";
 
 const btnDisabled = ref(false),
   store = useApiStore(),
