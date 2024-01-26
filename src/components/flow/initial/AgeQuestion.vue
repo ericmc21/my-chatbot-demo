@@ -80,7 +80,17 @@ const chooseAge = async () => {
     true
   );
 
-  await flow.push("RiskfactorRegion");
+  let riskFactors;
+  await store
+    .getRiskFactors()
+    .then((response) => response.json())
+    .then((json) => (riskFactors = json));
+
+  await flow.push("RiskfactorSuggestions", {
+    riskFactors: riskFactors,
+  });
+
+  await flow.push("RiskFactorSuggestions");
 };
 
 onMounted(() => {

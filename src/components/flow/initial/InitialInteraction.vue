@@ -1,7 +1,7 @@
 <template>
   <message-box>
-    I'm powered all up by Infermedica API! Read more about it.
-    <a href="https://developer.infermedica.com">All up in here</a>
+    I'm powered by Infermedica API! Read more about it.
+    <a href="https://developer.infermedica.com">here</a>
     <div style="margin-top: 16px">
       <message-button :disabled="btnDisabled" @click="next">
         Let's go!

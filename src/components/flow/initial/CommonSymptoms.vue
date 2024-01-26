@@ -28,6 +28,7 @@ async function handleDone() {
   if (selected.value.length) {
     store.apiState.evidence = [...evidence, ...selected.value];
   }
+  console.log(selected);
   await flow.push("CommonSymptomsResponse", { selected });
 }
 </script>

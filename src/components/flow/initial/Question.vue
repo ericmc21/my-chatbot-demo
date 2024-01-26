@@ -1,8 +1,7 @@
 <template>
   <message-box
-    >I'm sorry you're not feeling well. Please type in the symptoms that are
-    bothering you the most. It will help me if you add more than 1 symptom, for
-    example, "I have a sore throat and a cough."</message-box
+    >Are there any other symptoms bothering you? Please type in any other
+    symptoms."</message-box
   >
 </template>
 
