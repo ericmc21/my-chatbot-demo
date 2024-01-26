@@ -30,6 +30,9 @@ import TriageAlarmingSymptoms from "@/components/flow/results/TriageAlarmingSymp
 import { computed, onMounted } from "vue";
 import PlainMessage from "@/components/flow/PlainMessage.vue";
 import MessageLoading from "@/components/MessageLoading.vue";
+import ConditionSpecificSuggestions from "../components/flow/initial/ConditionSpecificSuggestions.vue";
+import CommonSymptoms from "../components/flow/initial/CommonSymptoms.vue";
+import CommonSymptomsResponse from "../components/flow/initial/CommonSymptomsResponse.vue";
 
 export default {
   components: {
@@ -49,6 +52,9 @@ export default {
     TriageAlarmingSymptoms,
     PlainMessage,
     MessageLoading,
+    ConditionSpecificSuggestions,
+    CommonSymptoms,
+    CommonSymptomsResponse,
   },
   setup() {
     const flowStore = useFlowStore(),
